@@ -15,7 +15,9 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ### npm install  @vitejs/plugin-vue-jsx
 #### 引入 @vitejs/plugin-vue-jsx 兼容 JSX 语法（案例：用JSX写组件注册成基础组件）
+
 build/config.base.js 或者 vite.config.js
+---
 ```
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -28,10 +30,11 @@ export default {
 }
 ```
 
-
 ### npm install axios --save
+
 src/utils/request.js
-        
+---
+```
 import axios from 'axios'
 // import { useMsgbox, Message } from 'element3'
 import store from '@/store'
@@ -73,10 +76,11 @@ service.interceptors.response.use(
 )
 
 export default service
-        
+```
 
 src/apis/auth.js
-``
+---
+```
 import request from '@/utils/request'
 
 // 账号密码登录
@@ -89,12 +93,14 @@ export function doLogin(data) {
   } = data
   return request.post('/admin-backend/supplier/login', { username, password, checkKey, captcha })
 }
-``
+```
 
 
 #### vite中的proxy代理
+
 build/config.dev.js
-``
+---
+```
 import { defineConfig, mergeConfig } from 'vite'
 
 import baseConfig from './config.base'
@@ -113,11 +119,13 @@ export default defineConfig(mergeConfig(baseConfig, {
     }
   }
 }))
-``
+```
 
 ### npm install vue-router --save
+
 src/router/index.js
-``
+---
+```
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
@@ -169,10 +177,11 @@ router.beforeEach((to, form, next) => {
 
 
 export default router
-``
+```
 
 main.js 引入 router
-``
+---
+```
 import { createApp } from 'vue'
 import App from './App.vue'
 
@@ -183,12 +192,14 @@ app.use(router)
 
 app.mount('#app')
 
-``
+```
 
 
 ### npm install vuex --save
+
 src/store/index.js
-``
+---
+```
 import { createStore, useStore as baseUseStore } from 'vuex'
 import modules from './modules/index'
 
@@ -217,20 +228,22 @@ export const key = Symbol('y-store')
 export function useStore () {
   return baseUseStore(key)
 }
-``
+```
 
 src/store/modules/index.js
-``
+---
+```
 import auth from './auth'
 
 const modules = {
   auth
 }
 export default modules
-``
+```
 
 src/store/modules/auth.js
-``
+---
+```
 const authModule = {
   namespace: true, // 配合module使用【true-调用action方法时，路径：文件名/actions下面得方法名】
   state: {
@@ -259,9 +272,11 @@ const authModule = {
 }
 
 export default authModule
-``
+```
+
 main.js 引入 store
-``
+---
+```
 import { createApp } from 'vue'
 import App from './App.vue'
 import { store, key } from '@/store'
@@ -270,19 +285,21 @@ const app = createApp(App)
 app.use(store, key)
 
 app.mount('#app')
-``
+```
 
 ### npm install sass --save
 安装即用
 
 ### npm install eslint -D
+
 ESLint 安装成功后，在项目根目录下执行 npx eslint --init，然后按照终端操作的提示完成一系列设置来创建配置文件。
 进入到项目目录下的 eslintrc.json 中，在 rules 中新增下面代码，也就是强制要求 JavaScript 的行尾不写分号。
-``
+---
+```
     "rules": {
         "semi": ["warn","never"]
     }
-``
+```
 然后，我们在命令行中执行 npx eslint src，接着你就会看到下图所示的报错信息，其中详细告诉你了哪里的代码不合规范。
 
 ### npm install vite-plugin-html -D
@@ -290,7 +307,8 @@ ESLint 安装成功后，在项目根目录下执行 npx eslint --init，然后�
 package.json
 
 vite.config.js
-``
+---
+```
 import { injectHtml } from 'vite-plugin-html'
 
 export default defineConfig({
@@ -310,10 +328,11 @@ export default defineConfig({
     })
   ]
 })
-``
+```
 
 package.json
-``
+---
+```
 {
   "name": "vite_project_20211126",
   "version": "0.0.0",
@@ -324,7 +343,8 @@ package.json
   ``
 
 index.html
-``
+---
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -345,5 +365,4 @@ index.html
 </body>
 
 </html>
-  ``
-
+```
