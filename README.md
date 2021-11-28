@@ -11,9 +11,9 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## 搭建脚手架的心路历程
 
-### npm install @vitejs/app
+### 步骤1. npm install @vitejs/app
 
-### npm install  @vitejs/plugin-vue-jsx
+### 步骤2. npm install  @vitejs/plugin-vue-jsx
 #### 引入 @vitejs/plugin-vue-jsx 兼容 JSX 语法（案例：用JSX写组件注册成基础组件）
 
 build/config.base.js 或者 vite.config.js
@@ -30,7 +30,7 @@ export default {
 }
 ```
 
-### npm install axios --save
+### 步骤3. npm install axios --save
 
 src/utils/request.js
 ---
@@ -96,7 +96,7 @@ export function doLogin(data) {
 ```
 
 
-#### vite中的proxy代理
+#### 步骤4. vite中的proxy代理
 
 build/config.dev.js
 ---
@@ -121,7 +121,7 @@ export default defineConfig(mergeConfig(baseConfig, {
 }))
 ```
 
-### npm install vue-router --save
+### 步骤5. npm install vue-router --save
 
 src/router/index.js
 ---
@@ -195,7 +195,7 @@ app.mount('#app')
 ```
 
 
-### npm install vuex --save
+### 步骤6. npm install vuex --save
 
 src/store/index.js
 ---
@@ -287,23 +287,23 @@ app.use(store, key)
 app.mount('#app')
 ```
 
-### npm install sass --save
-安装即用
+### 步骤7. npm install sass --save
+#### 安装即用
 
-### npm install eslint -D
+### 步骤8. npm install eslint -D
 
-ESLint 安装成功后，在项目根目录下执行 npx eslint --init，然后按照终端操作的提示完成一系列设置来创建配置文件。
-进入到项目目录下的 eslintrc.json 中，在 rules 中新增下面代码，也就是强制要求 JavaScript 的行尾不写分号。
+#### ESLint 安装成功后，在项目根目录下执行 npx eslint --init，然后按照终端操作的提示完成一系列设置来创建配置文件。
+#### 进入到项目目录下的 eslintrc.json 中，在 rules 中新增下面代码，也就是强制要求 JavaScript 的行尾不写分号。
 ---
 ```
     "rules": {
         "semi": ["warn","never"]
     }
 ```
-然后，我们在命令行中执行 npx eslint src，接着你就会看到下图所示的报错信息，其中详细告诉你了哪里的代码不合规范。
+#### 然后，我们在命令行中执行 npx eslint src，接着你就会看到下图所示的报错信息，其中详细告诉你了哪里的代码不合规范。
 
-### npm install vite-plugin-html -D
-利用vite-plugin-html插件，修改网页在浏览器的标题和图标。
+### 步骤9. npm install vite-plugin-html -D
+#### 利用vite-plugin-html插件，修改网页在浏览器的标题和图标。
 package.json
 
 vite.config.js
@@ -340,7 +340,7 @@ package.json
   "iconsrc": "/zbc.png",
   ...
 }
-  ``
+```
 
 index.html
 ---
