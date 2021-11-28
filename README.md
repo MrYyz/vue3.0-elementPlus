@@ -16,7 +16,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ### npm install  @vitejs/plugin-vue-jsx
 #### 引入 @vitejs/plugin-vue-jsx 兼容 JSX 语法（案例：用JSX写组件注册成基础组件）
 build/config.base.js 或者 vite.config.js
-`
+```
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
@@ -26,12 +26,12 @@ export default {
     vueJsx(),
   ]
 }
-`
+```
 
 
 ### npm install axios --save
 src/utils/request.js
-``
+        
 import axios from 'axios'
 // import { useMsgbox, Message } from 'element3'
 import store from '@/store'
@@ -73,7 +73,7 @@ service.interceptors.response.use(
 )
 
 export default service
-``
+        
 
 src/apis/auth.js
 ``
