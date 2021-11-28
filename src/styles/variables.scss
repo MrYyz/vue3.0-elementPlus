@@ -1,0 +1,14 @@
+$themeColor: rgb(20, 180, 250); // 主题色
+$gray: #666666; // 置灰
+$warn: #F5AF47; // 警告
+$danger: #F56C6C; // 错误提示
+
+$bgColor: rgb(243, 245, 246); // 背景颜色
+$bdColor: #E7E7E7; // 边框颜色
+$boxShadow: 0 2px 6px 0 rgb(0 0 0 / 6%); // 弹窗头部边框阴影（仅供参考）
+
+// 暴露公用样式
+:export {
+  themeColor: $themeColor;
+  bgColor: $bgColor;
+}

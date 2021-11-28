@@ -1,0 +1,31 @@
+{
+  "name": "vite_project_20211126",
+  "version": "0.0.0",
+  "description": "智博诚PC端vue3",
+  "iconsrc": "/zbc.png",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "dev-test": "vite --mode development --config ./build/config.dev.js",
+    "build-test": "vite --mode production build --config ./build/config.prod.js",
+    "serve": "vite preview",
+    "lint": "eslint --ext .vue,.js,.jsx ./src",
+    "eslint": "npx eslint src"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "element-plus": "^1.2.0-beta.3",
+    "sass": "^1.43.5",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vitejs/plugin-vue-jsx": "^1.3.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-vue": "^8.1.1",
+    "vite": "^2.6.4",
+    "vite-plugin-html": "^2.1.1"
+  }
+}
