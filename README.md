@@ -14,7 +14,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ### 步骤1. npm install @vitejs/app
 
 ### 步骤2. npm install  @vitejs/plugin-vue-jsx
-#### 引入 @vitejs/plugin-vue-jsx 兼容 JSX 语法（案例：用JSX写组件注册成基础组件）
+##### 引入 @vitejs/plugin-vue-jsx 兼容 JSX 语法（案例：用JSX写组件注册成基础组件）
 
 build/config.base.js 或者 vite.config.js
 ---
