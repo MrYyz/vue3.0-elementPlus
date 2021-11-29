@@ -96,7 +96,7 @@ export function doLogin(data) {
 ```
 
 
-#### 步骤4. vite中的proxy代理
+### 步骤4. vite中的proxy代理
 
 build/config.dev.js
 ---
